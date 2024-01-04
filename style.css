@@ -67,6 +67,17 @@ nav {
     font-weight: 900;
     line-height: 27px;
 }
+.score-board div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.score-board span {
+    background-color: hsl(229, 25%, 31%);
+    width: 1rem;
+    height: 0.5rem;
+    margin-bottom: 8px;
+}
 .score {
     font-size: 40px;
     font-weight: 900;
