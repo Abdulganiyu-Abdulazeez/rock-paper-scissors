@@ -9,7 +9,8 @@ var peice;
 var house;
 var youChoose;
 var x;
-var score = 0;
+var scoreHuman = 0;
+var scoreComputer = 0;
 
 
 rule.addEventListener("click", display);
@@ -84,55 +85,61 @@ function shuffle() {
         document.querySelector(".houseRock").classList.remove("hide");
         if (x == "scissors") {
             document.querySelector(".houseWin").classList.remove("hide");
-            score--;
-            document.querySelector(".score").textContent = score;
+            scoreComputer++;
+            document.querySelector(".scoreComputer").textContent = scoreComputer;
             computer.removeEventListener("click", shuffle);
         } else if (x == "paper") {
             document.querySelector(".youWin").classList.remove("hide");
             computer.removeEventListener("click", shuffle);
-            score++;
-            document.querySelector(".score").textContent = score;
+            scoreHuman++;
+            document.querySelector(".scoreHuman").textContent = scoreHuman;
         } else if (x == "rock") {
             document.querySelector(".draw").classList.remove("hide");
             computer.removeEventListener("click", shuffle)
-            score += 0
-            document.querySelector(".score").textContent = score;
+            scoreHuman += 0
+            scoreComputer += 0
+            document.querySelector(".scoreHuman").textContent = scoreHuman;
+            document.querySelector(".scoreComputer").textContent = scoreComputer;
         }
     }else if (house[peice] == paper) {
         document.querySelector(".housePaper").classList.remove("hide");
         if (x == "scissors") {
             document.querySelector(".youWin").classList.remove("hide");
             computer.removeEventListener("click", shuffle);
-            score++;
-            document.querySelector(".score").textContent = score;
+            scoreHuman++;
+            document.querySelector(".scoreHuman").textContent = scoreHuman;
         } else if (x == "paper") {
             document.querySelector(".draw").classList.remove("hide");
             computer.removeEventListener("click", shuffle);
-            score += 0
-            document.querySelector(".score").textContent = score;
+            scoreHuman += 0
+            scoreComputer += 0
+            document.querySelector(".scoreHuman").textContent = scoreHuman;
+            document.querySelector(".scoreComputer").textContent = scoreComputer;
         } else if (x == "rock") {
             document.querySelector(".houseWin").classList.remove("hide");
             computer.removeEventListener("click", shuffle);
-            score--
-            document.querySelector(".score").textContent = score;
+            scoreComputer++
+            document.querySelector(".scoreComputer").textContent = scoreComputer;
         }
     } else if (house[peice] == scissors) {
         document.querySelector(".houseScissors").classList.remove("hide");
         if (x == "scissors") {
             document.querySelector(".draw").classList.remove("hide");
             computer.removeEventListener("click", shuffle);
-            score += 0
-            document.querySelector(".score").textContent = score;
+            scoreHuman += 0
+            scoreComputer+= 0
+            document.querySelector(".scoreHuman").textContent = scoreHuman;
+            document.querySelector(".scoreComputer").textContent = scoreComputer;
         } else if (x == "paper") {
             document.querySelector(".houseWin").classList.remove("hide");
             computer.removeEventListener("click", shuffle);
-            score--
-            document.querySelector(".score").textContent = score;
+            scoreComputer++
+            document.querySelector(".scoreComputer").textContent = scoreComputer;
         } else if (x == "rock") {
             document.querySelector(".youWin").classList.remove("hide");
             computer.removeEventListener("click", shuffle);
-            score++ 
-            document.querySelector(".score").textContent = score;
+            scoreHuman++ 
+            document.querySelector(".scoreHuman").textContent = scoreHuman;
         }
     }
 }
