@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Epilogue:ital,wght@0,500;1,100&family=Fraunces:opsz@9..144&family=Lexend+Deca&family=Metrophobic&family=Mulish:ital,wght@0,400;0,500;0,700;1,300&family=Noto+Sans&family=Overpass&display=swap');
+  </style>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <img src="./images/logo.svg" alt="">
+      </div>
+      <div class="score-board">
+        <p>SCORE</p>
+        <p class="score">0</p>
+      </div>
+    </nav>
+    <div class="body-container">
+      <div class="body">
+        <div class="triangle">
+          <img src="./images/bg-triangle.svg" alt="">
+        </div>
+        <div class="paper peice">
+          <img src="./images/paper.png" alt="">
+        </div>
+        <div class="scissors peice">
+          <img src="./images/scissors.png" alt="">
+        </div>
+        <div class="rock peice">
+          <img src="./images/rock.png" alt="">
+        </div>
+      </div>
+      <div class="finals hide">
+        <div class="human">
+          <img src="" alt="">
+        </div> 
+        <div class="computer">
+          <img class="houseRock hide" src="./images/rock.png" alt="">
+          <img class="houseScissors hide" src="./images/scissors.png" alt="">
+          <img class="housePaper hide" src="./images/paper.png" alt="">
+        </div>
+      </div>
+      <div class="player-name hide">
+        <p>YOU PICKED</p>
+        <p>THE HOUSE PICKED</p>
+      </div>
+      <div class="youWin hide">
+        <h1>YOU WIN</h1>
+        <p class="playAgain">PLAY AGAIN</p>
+      </div>
+      <div class="houseWin hide">
+        <h1>YOU LOSE</h1>
+        <p class="playAgain">PLAY AGAIN</p>
+      </div>
+      <div class="draw hide">
+        <h1>DRAW</h1>
+        <p class="playAgain">PLAY AGAIN</p>
+      </div>
+    </div>
+  </div>
+  <div class="buttons">
+    <div class="rule">RULES</div>
+  </div>
+  <div class="rule-container">
+    <div class="rules">
+      <div>
+        <h1>RULES</h1>
+        <img class="close" src="./images/icon-close.svg" alt="">
+      </div>
+      <img src="./images/image-rules.svg" alt="">
+    </div>
+  </div>
+  <!-- <div class="att-contianer">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Abdulganiyu Abdulazeez</a>.
+    </div>
+  </div> -->
+  
+  <script src="script.js"></script>
+</body>
+</html>

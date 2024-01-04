@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    max-width: 1440px;
+    overflow: hidden;
+    /* max-width: fit-content; */
+    /* margin: 0 auto; */
+    background: radial-gradient(circle at center,  hsl(214, 47%, 23%) , hsl(237, 49%, 15%));
+    /* background-color: hsl(214, 47%, 23%) ; */
+     /* font-family: 'Big Shoulders Display', cursive; */
+    /* font-family: 'Epilogue', sans-serif; */
+    /* font-family: 'Fraunces', serif; */
+    /* font-family: 'Lexend Deca', sans-serif; */
+    /* font-family: 'Metrophobic', sans-serif; */
+    /* font-family: 'Mulish', sans-serif; */
+    /* font-family: 'Noto Sans', sans-serif; */
+    font-family: 'Overpass', sans-serif;
+}
+.hide {
+    display: none !important;
+}
+.container {
+    width: 60%;
+    height: 80vh;
+    padding: 2rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+nav {
+    width: 100%;
+    height: fit-content;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border: 3px solid hsl(217, 16%, 45%);
+    border-radius: 15px;
+}
+.logo img {
+    width: 8rem;
+    height: 5rem;
+}
+.score-board {
+    width: 6rem;
+    height: 5rem;
+    border-radius: 8px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    font-size: 14px;
+    color: hsl(229, 64%, 46%);
+    font-weight: 900;
+    line-height: 27px;
+}
+.score {
+    font-size: 40px;
+    font-weight: 900;
+    color: hsl(229, 25%, 31%);
+}
+.body-container {
+    position: static;
+    width: 20rem !important;
+    height: 18rem !important;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    /* margin-top: 5rem; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+.triangle{
+    width: 15rem;
+    height: 12rem;
+    /* position: absolute; */
+    /* top: 3rem;
+    left: 23%; */
+}
+.triangle img {
+    width: 100%;
+    height: 100%;
+}
+.paper, .scissors, .rock {
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 8rem;
+    height: 8rem;
+}
+.paper img, .rock img, .scissors img {
+    width: 100%;
+    height: 100%;
+}
+.paper {
+    left: -2rem;
+    top: -2rem;
+}
+.scissors{
+    right: -2rem;
+    top: -2rem;
+}
+.rock {
+    left: 6rem;
+    bottom: -2rem;
+    background-color: hsl(349, 69%, 24%);
+}
+.buttons {
+    /* margin-top: 55vh; */
+    position: fixed;
+    z-index: 20;
+    left: -10vw;
+    top: 80vh;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: 2px solid hsl(217, 16%, 45%);
+    width: fit-content;
+    color: hsl(217, 16%, 45%);
+    font: 900;
+    /* margin-top: 0vh; */
+    margin-left: 88%;
+    font-weight: 700;
+}
+.buttons:hover {
+    cursor: pointer;
+    background-color: hsl(217, 16%, 45%);
+    color: hsl(214, 96%, 19%);
+    transition: 0.2s;
+}
+.finals, .player-name {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0rem;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: 700;
+}
+.player-name {
+    padding-left: 1rem !important;
+}
+.human, .computer {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background-color: hsl(214, 96%, 19%);
+}
+.human img, .houseRock, .housePaper, .houseScissors{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.youWin, .houseWin, .draw {
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+}
+.playAgain {
+    border-radius: 10px;
+    padding: 10px 15px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+.playAgain:hover {
+    transition: 0.2s;
+    background-color: white;
+    color: hsl(229, 64%, 46%);
+}
+.rule-container {
+    width: 100%;
+    height: 100vh;
+    /* background-color: white;  */
+    top: 0vh;   
+    /* padding-top: 10rem;
+    padding-left: 24rem; */
+    position: relative;
+    /* z-index: 20; */
+    /* padding: 35.5rem 9rem; */
+    /* position: absolute !important; */
+    /* top: 9rem;
+    left: 35.5%; */
+    z-index: 20;
+    
+}
+.rules {
+    width: 17rem;
+    height: fit-content;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    color: hsl(214, 96%, 19%);
+    position: absolute;
+    inset: 0;
+    margin: 0 auto;
+    margin-top: -45vh;
+}
+.rules div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.rules img {
+    width: 12rem;
+    height: 12rem;
+}
+.close {
+    width: 1rem !important;
+    height: 1rem !important;
+    cursor: pointer;
+}
+
+.close:hover {
+    border: 2px solid hsl(0, 0%, 78%);
+}
+.att-container{
+    width: 100%;
+}
+.attribution {
+    width: fit-content;
+    margin-top: -1rem;
+    /* position: relative; */
+    bottom: -55%;
+    margin-left: 30%;
+    z-index: 3;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 425px) {
+    body {
+        width: 100%;
+        height: 120vh;
+        max-width: 425px;
+        margin: 0 auto;
+    }
+    .logo img {
+        width: 7rem;
+        height: 4rem;
+    }
+    .container {
+        width: 100% !important;
+        height: 100vh;
+        /* padding-top: 1rem; */
+        /* padding: 0rem; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        width: 100% !important;
+        /* margin-top: -1rem; */
+    }
+    .score-board{
+        width: 4rem;
+        height: 4rem;
+    }
+    /* .rule-container {
+        padding-top: 40% !important;
+        padding-left: 15% !important;
+    } */
+    .rules {
+        top: -2rem;
+    }
+    .body-container {
+        width: 15rem !important;
+        height: 15rem !important;
+        margin-top: -3rem;
+        /* padding: 2rem/; */
+    }
+    .body {
+        width: 100%;
+        /* left: -1.5rem; */
+        /* margin-top: 3rem; */
+    }
+    .scissors {
+        top: 2rem !important;
+        right: 2rem !important;
+        width: 6rem !important;
+        height: 6rem !important;
+    }
+    .paper {
+        top: 2rem !important;
+        left: 2rem !important;
+        width: 6rem !important;
+        height: 6rem !important;
+    }
+    .rock {
+        bottom: 2rem !important;
+        left: 7rem !important;
+        width: 6rem !important;
+        height: 6rem !important;
+    }
+    .triangle{
+        width: 10rem !important;
+        height: 8rem !important;
+        position: absolute;
+        /* top: 3rem; */
+    }
+    .buttons {
+        top: 92vh;
+        left: -50vw;
+    }
+    .finals{
+        justify-content: space-evenly;
+    }
+    /* .attribution {
+        margin-left: 4rem;
+        left: -10% !important;
+    } */
+}
+
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    .container {
+        width: 80%;
+        height: 100vh;
+        /* padding-top: 1rem; */
+        /* padding: 0rem; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .scissors {
+        right: 0rem;
+        /* width: 8rem !important;
+        height: 8rem !important; */
+    }
+    .paper {
+        left: 0rem;
+        /* width: 8rem !important; 
+        height: 8rem !important; */
+    }
+    .rock {
+        left: 5.5rem;
+        /* width: 8rem !important;
+        height: 8rem !important; */
+    }
+    .body-container {
+        width: 20rem !important;
+        height: 18rem !important;
+    }
+    .rules {
+        margin-top: -20rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    
+}
